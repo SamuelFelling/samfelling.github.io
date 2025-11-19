@@ -1,0 +1,203 @@
+/* Shared site stylesheet — modern, responsive, accessible */
+:root{
+  --bg:#f7f9fb;
+  --card:#ffffff;
+  --text:#1f2937;
+  --muted:#6b7280;
+  --accent:#2563eb;
+  --accent-2:#06b6d4;
+  --radius:10px;
+  --max-width:1100px;
+}
+
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;line-height:1.5;margin:0;color:var(--text);background:var(--bg)}
+.container{max-width:var(--max-width);margin:0 auto;padding:1rem}
+
+/* Header / Nav */
+.site-header{background:linear-gradient(90deg, rgba(37,99,235,0.95), rgba(6,182,212,0.95));color:white}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;text-decoration:none;color:white}
+.headshot{width:44px;height:44px;border-radius:50%;object-fit:cover;margin-right:10px;border:2px solid rgba(255,255,255,0.2)}
+.name{font-weight:600}
+.main-nav a{color:white;text-decoration:none;margin-left:1rem;opacity:0.95}
+.main-nav a:hover,.main-nav a.active{opacity:1;text-decoration:underline}
+
+/* Hero */
+.hero{padding:3rem 0;color:white}
+.hero-inner{display:flex;gap:2rem;align-items:center}
+.hero-copy{flex:1}
+.hero-copy h1{font-size:2.25rem;margin:0 0 .5rem}
+.lead{font-size:1.05rem;max-width:38rem}
+.cta{display:inline-block;background:var(--accent);color:white;padding:.6rem 1rem;border-radius:8px;text-decoration:none}
+
+.hero-media{width:320px}
+.video-placeholder{position:relative;border-radius:8px;overflow:hidden}
+.video-placeholder img{width:100%;height:auto;display:block;filter:grayscale(10%) brightness(.95)}
+.video-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:white;font-weight:600;background:linear-gradient(180deg, rgba(0,0,0,0.0), rgba(0,0,0,0.35))}
+
+/* Cards & grids */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+.card{background:var(--card);padding:1rem;border-radius:var(--radius);box-shadow:0 6px 18px rgba(23,31,45,0.06);}
+.card img{width:100%;height:160px;object-fit:cover;border-radius:6px}
+
+/* Homepage: make the two 'Photos' images a bit larger than standard cards */
+.photos .photo-grid .card img{
+  height:260px;
+  border-radius:8px;
+}
+
+/* Responsive tweak for smaller screens */
+@media (max-width:768px){
+  .photos .photo-grid .card img{height:200px}
+}
+
+/* Make the headshot in the Photos grid slightly larger than the other two */
+.photos .photo-grid .card img.headshot-photo{
+  height:340px;
+}
+
+@media (max-width:768px){
+  .photos .photo-grid .card img.headshot-photo{height:260px}
+}
+
+/* Hero visual improvements */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.hero .hero-copy h1{
+  font-size: 3.25rem;
+  line-height: 1.05;
+  font-weight: 800;
+  color: var(--primary-color, #0a0a0a);
+  margin: 0 0 0.5rem 0;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+.hero .hero-copy .lead{
+  font-size: 1.05rem;
+  color: rgba(0,0,0,0.85);
+  margin-top: 0.75rem;
+}
+
+/* Place the longer intro section closer below the hero */
+.intro.container{
+  margin-top: 0.5rem;
+}
+
+/* Video sizing inside hero */
+.video-wrapper video{
+  width:100%;
+  height:auto;
+  border-radius:8px;
+  box-shadow:0 6px 20px rgba(0,0,0,0.12);
+}
+
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;}
+  .hero .hero-copy h1{font-size:2.25rem}
+  .video-wrapper{order:2}
+}
+
+/* Allow one hobby image (sports) to shift the visible crop upward so the face is visible */
+.hobbies-preview .card img{
+  /* Make homepage hobby images a bit larger than the default cards */
+  height:220px;
+  object-fit:cover;
+  border-radius:8px;
+}
+
+@media (max-width:768px){
+  .hobbies-preview .card img{height:160px}
+}
+
+.hobbies-preview .card img.focus-top{
+  object-position:50% 40%;
+}
+.hobby-grid .card h3{margin:.5rem 0}
+.more{margin-top:.5rem}
+
+/* Resume */
+.resume-main{padding:2rem 0}
+.resume-section{background:var(--card);padding:1rem;border-radius:8px;margin-bottom:1rem}
+.download-btn{background:var(--accent-2);color:white;padding:.5rem .75rem;border-radius:8px;text-decoration:none}
+
+/* Career cards */
+.company-cards{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.company-card{background:var(--card);padding:1rem;border-radius:8px;box-shadow:0 6px 18px rgba(23,31,45,0.05)}
+.company-card .contact{font-size:.95rem;color:var(--muted)}
+
+/* Game */
+.game-area{background:var(--card);padding:1rem;border-radius:8px;text-align:center}
+.game-stats{display:flex;gap:1rem;justify-content:center;font-weight:600;margin-bottom:1rem}
+.cta.secondary{background:transparent;border:2px solid var(--accent);color:var(--accent);}
+.game-message{margin-top:1rem;font-weight:600;color:var(--muted)}
+
+/* Footer */
+.site-footer{margin-top:3rem;padding:1rem 0;background:transparent;color:var(--muted)}
+.footer-inner{display:flex;justify-content:center}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero-inner{flex-direction:column}
+  .hero-media{width:100%}
+  .company-cards{grid-template-columns:1fr}
+}
+
+/* Small utilities */
+.text-muted{color:var(--muted)}
+
+/* Accessibility focus */
+a:focus,button:focus{outline:3px solid rgba(37,99,235,0.25);outline-offset:2px}
+
+/* Small improvements for images */
+img{max-width:100%;height:auto;display:block}
+
+/* End of stylesheet */
+
+/* ---------- Dodge game styles (appended) ---------- */
+.dodge-game .game-ui{display:flex;flex-direction:column;align-items:center;gap:1rem}
+.controls{display:flex;gap:1rem;align-items:center;margin-bottom:0.5rem}
+.game-container{width:600px;height:480px;background:linear-gradient(#e6eefb,#ffffff);border-radius:8px;box-shadow:0 8px 20px rgba(31,41,55,0.08);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.game-container.small{width:100%;height:360px}
+.score{font-weight:700;color:var(--text)}
+.instructions{max-width:640px;text-align:center}
+
+/* Canvas will scale to container */
+#dodge-canvas{width:100%;height:100%;display:block}
+
+/* Player and enemy visual styles (for non-canvas fallback or debugging) */
+.player{width:40px;height:40px;background:#2563eb}
+.enemy{width:30px;height:30px;background:#ef4444}
+
+@media (max-width:720px){
+  .game-container{width:100%;height:320px}
+}
+
+/* End Dodge game styles */
+
+/* Video embed styling for discover page */
+.video-embed{display:flex;justify-content:center;margin:1rem 0}
+.video-wrapper{position:relative;max-width:900px;width:100%;border-radius:8px;overflow:hidden;background:#000}
+.video-wrapper video{display:block;width:100%;height:100%;object-fit:cover}
+.video-play-btn{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:rgba(0,0,0,0.45);color:#fff;border:0;padding:14px 18px;border-radius:50%;font-size:20px;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,0.3)}
+.video-play-btn.hidden{display:none}
+
+@media (max-width:720px){
+  .video-play-btn{padding:10px 12px;font-size:18px}
+}
+
+/* Hobby page: make gallery images smaller (roughly half size) */
+.hobbies-gallery img{
+  width:48%;
+  height:auto;
+  display:inline-block;
+  margin:0.5% 1%;
+  vertical-align:top;
+  border-radius:6px;
+}
+

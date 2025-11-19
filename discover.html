@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Discover — Personal Site</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+  <a class="brand" href="index.html"><img src="images/headshot.jpg" alt="Sam Felling headshot" class="headshot" onerror="this.onerror=null;this.src='images/Headshot.TIFF'"><span class="name">Sam Felling</span></a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="hobbies.html">Hobbies</a>
+        <a href="discover.html" class="active">Discover</a>
+        <a href="resume.html">Resume</a>
+        <a href="career.html">Career</a>
+        <a href="game.html">Game</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Discover — UMD & Duluth</h1>
+
+    <section>
+      <h2>Why I chose the University of Minnesota Duluth</h2>
+      <p>I initially chose the University of Minnesota Duluth because many of my friends were attending. Even though I no longer live with any of them, I’ve formed great friendships with new roommates and classmates. One of the strongest qualities of UMD is the sense of community — being a smaller school makes it easier to build close connections and meet a large portion of students in your class.</p>
+    </section>
+
+    <section>
+      <h2>What I like about Duluth</h2>
+      <p>I also appreciate Duluth’s location. While I’m not someone who spends a lot of time outdoors, I still enjoy how much the city has to offer. Whether you’re spending time in Canal Park, visiting the mall, or exploring the area, there’s always something to do. Duluth has a unique atmosphere that makes living here enjoyable.</p>
+    </section>
+
+    <section>
+      <h2>UMD Marketing Video</h2>
+      <div class="video-embed">
+        <!-- Video element: browsers prefer common web formats. Files should be placed in images/ as
+             1016.mp4 (recommended) and/or 1016.webm for fallback. The video will NOT autoplay. -->
+        <div class="video-wrapper">
+            <video id="umd-video" controls preload="metadata" poster="images/hobby3.jpg" aria-label="UMD marketing video">
+              <source src="images/Marketing Video.mp4" type="video/mp4">
+              <source src="images/1016.mp4" type="video/mp4">
+              <source src="images/1016.webm" type="video/webm">
+              Your browser does not support embedded video. You can download it <a href="images/Marketing Video.mp4">here</a>.
+            </video>
+          <button class="video-play-btn" id="umd-video-btn" aria-label="Play video">▶</button>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Personal experiences</h2>
+      <p>Some of my favorite experiences at UMD include going to the bar with friends and playing intramural sports like basketball and hockey. Since UMD is a big hockey school, I also enjoy going to games at Amsoil Arena and supporting the team. I appreciate the variety of food options on campus as well — having a block plan the past few years has helped me save money while keeping meals convenient.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+  <p>&copy; <span id="year-3"></span> Sam Felling — <a href="index.html">Home</a></p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

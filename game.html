@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Dodge Game — Sam Felling</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img src="images/headshot.jpg" alt="Sam Felling headshot" class="headshot" onerror="this.onerror=null;this.src='images/Headshot.TIFF'"><span class="name">Sam Felling</span></a>
+      <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="hobbies.html">Hobbies</a>
+        <a href="discover.html">Discover</a>
+        <a href="resume.html">Resume</a>
+        <a href="career.html">Career</a>
+        <a href="game.html" class="active">Game</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container game-main">
+    <h1>Simple Dodge Game</h1>
+    <p>Use the left and right arrow keys to move the blue player square and dodge the falling red enemies. Survive as long as you can — your time is your score.</p>
+
+    <section class="dodge-game">
+      <div class="game-ui">
+        <div class="controls">
+          <button id="dodge-start" class="cta">Start</button>
+          <button id="dodge-reset" class="cta secondary">Reset</button>
+          <div class="score">Time: <span id="dodge-score">0.00</span>s</div>
+        </div>
+
+        <div class="game-container" id="dodge-area" tabindex="0" aria-label="Dodge game area">
+          <!-- Canvas is created by script.js for reliability across browsers -->
+        </div>
+
+        <p class="instructions text-muted">Arrow keys to move. Avoid red squares. Press Start to begin.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year-6"></span> Sam Felling — <a href="index.html">Home</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
